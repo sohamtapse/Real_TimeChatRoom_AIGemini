@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 function connect(){
-    mongoose.connect("mongodb+srv://tapsesoham:soham123@prectices1.rupa5.mongodb.net/AI_ChatRoom")
+    mongoose.connect(process.env.MONGODB_URL)
         .then(()=>{
             console.log("Connected to database")
         })
